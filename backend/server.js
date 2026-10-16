@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const Mission = require("./models/Mission");
+const Mission = require("./models/mission");
 
 const GameProgress = require("./models/GameProgress")
 const app = express();
