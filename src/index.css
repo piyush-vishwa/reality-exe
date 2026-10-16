@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #08090d;
+    color-scheme: dark;
+  }
+  body {
+    @apply font-body text-ink antialiased;
+    min-height: 100vh;
+    background:
+      radial-gradient(900px 480px at 85% -10%, rgba(155, 109, 255, 0.16), transparent 60%),
+      radial-gradient(700px 400px at -5% 30%, rgba(182, 255, 74, 0.05), transparent 60%),
+      #08090d;
+    background-attachment: fixed;
+  }
+  :focus-visible {
+    outline: 2px solid #b6ff4a;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-white/[0.07] bg-card/80 backdrop-blur-md;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold
+      transition-colors duration-150 disabled:cursor-not-allowed;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
