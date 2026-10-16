@@ -18,7 +18,7 @@ import {
   xpIntoLevel,
 } from '../lib/game.js';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://reality-exe-backend.onrender.com/api';
 const MISSIONS_API = `${API_BASE}/missions`;
 const PROGRESS_API = `${API_BASE}/progress`;
 
